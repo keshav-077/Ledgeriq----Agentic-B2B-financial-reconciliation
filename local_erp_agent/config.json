@@ -1,0 +1,30 @@
+{
+  "agent_metadata": {
+    "integration_name": "local-dev",
+    "tracker_id": "00000000-0000-0000-0000-000000000000",
+    "company_id": "",
+    "version": "1.0.4-enterprise",
+    "created_at": "2026-01-01T00:00:00+00:00",
+    "environment": "development"
+  },
+  "lumina_cloud": {
+    "server_url": "http://localhost:8000",
+    "api_key": "REPLACE_WITH_API_KEY_FROM_LEDGERIQ_DASHBOARD",
+    "timeout_seconds": 30
+  },
+  "erp_connection": {
+    "driver": "json",
+    "database_host": "127.0.0.1",
+    "database_port": 1433,
+    "database_name": "ERP_DEV_DB",
+    "database_user": "erp_reader",
+    "database_password": "REPLACE_WITH_LOCAL_ERP_PASSWORD",
+    "local_file_path": "./data/erp_export.json"
+  },
+  "sync_settings": {
+    "poll_interval_seconds": 3600,
+    "batch_size": 5000,
+    "max_retries": 3,
+    "auto_update": true
+  }
+}

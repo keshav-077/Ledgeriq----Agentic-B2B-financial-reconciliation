@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+gcp-credentials.json
+.git/
+*.log
+.pytest_cache/
+node_modules/

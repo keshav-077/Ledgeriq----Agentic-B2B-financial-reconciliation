@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #141d26;
+    color: #dde3ec;
+    overflow-x: hidden;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #343a41 transparent;
+  }
+  *::-webkit-scrollbar       { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: #343a41; border-radius: 3px; }
+  *::-webkit-scrollbar-thumb:hover { background: #8e9192; }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(20, 29, 38, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-glass;
+  }
+
+  .btn-pill {
+    @apply bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-tint transition-colors;
+  }
+
+  .btn-pill-outline {
+    @apply border border-primary text-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-white/5 transition-colors;
+  }
+
+  .input-underline {
+    @apply w-full bg-surface-container border-b border-border-subtle border-t-0 border-l-0 border-r-0 focus:border-primary px-4 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant/50 rounded-t-lg outline-none transition-colors;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    font-size: 20px;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .material-symbols-outlined.icon-fill {
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+}

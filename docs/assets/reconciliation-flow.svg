@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-label="LedgerIQ reconciliation flow">
+  <defs>
+    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1016"/>
+      <stop offset="100%" stop-color="#141D26"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#243040"/>
+      <stop offset="100%" stop-color="#121A22"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BEC8D2" stop-opacity="0.2">
+        <animate attributeName="offset" values="-0.3;1.3" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.15" stop-color="#FFFFFF" stop-opacity="0.85">
+        <animate attributeName="offset" values="-0.15;1.45" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.3" stop-color="#BEC8D2" stop-opacity="0.2">
+        <animate attributeName="offset" values="0;1.6" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="280" rx="20" fill="url(#flowBg)"/>
+  <text x="480" y="34" text-anchor="middle" fill="#E8EDF2" font-family="Georgia, serif" font-size="22">Reconciliation Pipeline</text>
+
+  <g font-family="Segoe UI, sans-serif">
+    <rect x="24" y="70" width="130" height="130" rx="16" fill="url(#node)" stroke="#5E7384"/>
+    <text x="89" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Import</text>
+    <text x="89" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">Ledgers &amp;</text>
+    <text x="89" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">statements</text>
+
+    <rect x="184" y="70" width="130" height="130" rx="16" fill="url(#node)" stroke="#5E7384"/>
+    <text x="249" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Match</text>
+    <text x="249" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">transaction_ref</text>
+    <text x="249" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">deterministic diff</text>
+
+    <rect x="344" y="70" width="130" height="130" rx="16" fill="url(#node)" stroke="#8FA0AD"/>
+    <text x="409" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Analyze</text>
+    <text x="409" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">Gemini agents</text>
+    <text x="409" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">classify gaps</text>
+
+    <rect x="504" y="70" width="130" height="130" rx="16" fill="url(#node)" stroke="#8FA0AD"/>
+    <text x="569" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Draft</text>
+    <text x="569" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">resolution email</text>
+    <text x="569" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">await approval</text>
+
+    <rect x="664" y="70" width="130" height="130" rx="16" fill="url(#node)" stroke="#BEC8D2" stroke-width="1.6"/>
+    <text x="729" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Approve</text>
+    <text x="729" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">human-in-the-loop</text>
+    <text x="729" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">RBAC gate</text>
+
+    <rect x="824" y="70" width="112" height="130" rx="16" fill="url(#node)" stroke="#FFFFFF" stroke-width="1.4"/>
+    <text x="880" y="108" text-anchor="middle" fill="#FFF" font-size="13" font-weight="700">Send</text>
+    <text x="880" y="128" text-anchor="middle" fill="#9AABB8" font-size="10">SMTP dispatch</text>
+    <text x="880" y="142" text-anchor="middle" fill="#9AABB8" font-size="10">audit trail</text>
+  </g>
+
+  <path d="M154 135 H184" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M314 135 H344" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M474 135 H504" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M634 135 H664" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M794 135 H824" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="480" y="248" text-anchor="middle" fill="#7E909E" font-family="Segoe UI, sans-serif" font-size="11">Every outbound email requires explicit operator approval  AI assists, humans decide.</text>
+</svg>
