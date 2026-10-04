@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="LedgerIQ system design request path">
+  <rect width="960" height="520" rx="20" fill="#0A1016"/>
+  <text x="480" y="36" text-anchor="middle" fill="#E8EDF2" font-family="Georgia, serif" font-size="22">System design  request path</text>
+  <text x="480" y="58" text-anchor="middle" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">Operator UI and portal talk only to FastAPI. Agents reach Mongo only through MCP.</text>
+
+  <g font-family="Segoe UI, sans-serif">
+    <rect x="40" y="84" width="200" height="88" rx="12" fill="#141D26" stroke="#5E7384"/>
+    <text x="140" y="120" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Next.js 14</text>
+    <text x="140" y="142" text-anchor="middle" fill="#9AABB8" font-size="11">Dashboard ù portal</text>
+    <text x="140" y="158" text-anchor="middle" fill="#9AABB8" font-size="11">JWT cookie session</text>
+
+    <rect x="40" y="196" width="200" height="72" rx="12" fill="#141D26" stroke="#5E7384"/>
+    <text x="140" y="228" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">Magic-link portal</text>
+    <text x="140" y="248" text-anchor="middle" fill="#9AABB8" font-size="11">Counterparty upload</text>
+
+    <rect x="320" y="130" width="220" height="120" rx="12" fill="#141D26" stroke="#BEC8D2"/>
+    <text x="430" y="170" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">FastAPI</text>
+    <text x="430" y="192" text-anchor="middle" fill="#9AABB8" font-size="11">JWT HS256 ù RBAC</text>
+    <text x="430" y="210" text-anchor="middle" fill="#9AABB8" font-size="11">REST /api/v1</text>
+    <text x="430" y="228" text-anchor="middle" fill="#9AABB8" font-size="11">Pydantic money models</text>
+
+    <rect x="640" y="84" width="280" height="88" rx="12" fill="#141D26" stroke="#BEC8D2"/>
+    <text x="780" y="118" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Gemini ADK</text>
+    <text x="780" y="140" text-anchor="middle" fill="#9AABB8" font-size="11">ReconciliationAgent</text>
+    <text x="780" y="156" text-anchor="middle" fill="#9AABB8" font-size="11">Analysis + Communication</text>
+
+    <rect x="640" y="196" width="280" height="72" rx="12" fill="#141D26" stroke="#5E7384"/>
+    <text x="780" y="228" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">MCP /mcp/sse</text>
+    <text x="780" y="248" text-anchor="middle" fill="#9AABB8" font-size="11">Allowlisted Mongo tools</text>
+
+    <rect x="320" y="300" width="220" height="80" rx="12" fill="#141D26" stroke="#5E7384"/>
+    <text x="430" y="334" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">MongoDB</text>
+    <text x="430" y="356" text-anchor="middle" fill="#9AABB8" font-size="11">Motor ù ledgers ù users</text>
+
+    <rect x="640" y="300" width="280" height="80" rx="12" fill="#141D26" stroke="#5E7384"/>
+    <text x="780" y="334" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">Local ERP agent</text>
+    <text x="780" y="356" text-anchor="middle" fill="#9AABB8" font-size="11">Excel ù CSV ù SAP-style export</text>
+  </g>
+
+  <path d="M240 128 H320" stroke="#BEC8D2" stroke-width="1.6"/>
+    <path d="M240 232 H320" stroke="#8FA0AD" stroke-width="1.4"/>
+  <path d="M540 190 H640" stroke="#BEC8D2" stroke-width="1.6"/>
+  <path d="M780 172 V196" stroke="#BEC8D2" stroke-width="1.6"/>
+  <path d="M780 268 V300" stroke="#8FA0AD" stroke-width="1.4"/>
+  <path d="M430 250 V300" stroke="#8FA0AD" stroke-width="1.4"/>
+  <path d="M640 232 H540 250" stroke="#5E7384" stroke-width="1.2" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="416" width="880" height="72" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="480" y="448" text-anchor="middle" fill="#C9D4DD" font-family="Segoe UI, sans-serif" font-size="13">Matching is a Python diff on transaction_ref. Gemini never invents the core numbers. SMTP fires only after approval.</text>
+  <text x="480" y="470" text-anchor="middle" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">Agents call find/update through MCP  not a raw Mongo connection from the model.</text>
+</svg>

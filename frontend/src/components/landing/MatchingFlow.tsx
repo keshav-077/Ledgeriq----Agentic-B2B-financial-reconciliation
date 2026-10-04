@@ -1,0 +1,60 @@
+export function MatchingFlow() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="640"
+      height="180"
+      viewBox="0 0 640 180"
+      className="absolute inset-0 h-full w-full"
+      role="img"
+      aria-label="Ledger matching internal and counterparty rows"
+    >
+      <rect width="640" height="180" rx="12" fill="#0A1016" />
+      <rect x="1" y="1" width="638" height="178" rx="11" fill="#141D26" />
+
+      <text x="96" y="26" textAnchor="middle" fill="#8FA0AD" fontFamily="Arial, Helvetica, sans-serif" fontSize="11" letterSpacing="1.6">INTERNAL</text>
+      <text x="544" y="26" textAnchor="middle" fill="#8FA0AD" fontFamily="Arial, Helvetica, sans-serif" fontSize="11" letterSpacing="1.6">COUNTERPARTY</text>
+
+      <rect x="20" y="40" width="152" height="32" rx="6" fill="#1A2530" stroke="#5E7384" />
+      <text x="32" y="61" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">INV-1042  $12,400</text>
+      <rect x="468" y="40" width="152" height="32" rx="6" fill="#1A2530" stroke="#5E7384" />
+      <text x="480" y="61" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">INV-1042  $12,400</text>
+
+      <rect x="20" y="82" width="152" height="32" rx="6" fill="#1A2530" stroke="#5E7384" />
+      <text x="32" y="103" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">INV-1043  $8,150</text>
+      <rect x="468" y="82" width="152" height="32" rx="6" fill="#243040" stroke="#BEC8D2" />
+      <text x="480" y="103" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">INV-1043  $8,050</text>
+
+      <rect x="20" y="124" width="152" height="32" rx="6" fill="#1A2530" stroke="#5E7384" />
+      <text x="32" y="145" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">PMT-881   $4,200</text>
+      <rect x="468" y="124" width="152" height="32" rx="6" fill="#1A2530" stroke="#5E7384" />
+      <text x="480" y="145" fill="#E8EDF2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12">PMT-881   $4,200</text>
+
+      <line x1="172" y1="56" x2="292" y2="56" stroke="#5E7384" strokeWidth="1.4" />
+      <line x1="348" y1="56" x2="468" y2="56" stroke="#5E7384" strokeWidth="1.4" />
+      <line x1="172" y1="98" x2="292" y2="98" stroke="#5E7384" strokeWidth="1.4" strokeDasharray="4 4" />
+      <line x1="348" y1="98" x2="468" y2="98" stroke="#5E7384" strokeWidth="1.4" strokeDasharray="4 4" />
+      <line x1="172" y1="140" x2="468" y2="140" stroke="#5E7384" strokeWidth="1.4" />
+
+      <circle cx="320" cy="56" r="12" fill="#141D26" stroke="#E8EDF2" strokeWidth="1.6" />
+      <path d="M314 56 L318 60 L327 50" fill="none" stroke="#E8EDF2" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="320" cy="98" r="12" fill="#141D26" stroke="#BEC8D2" strokeWidth="1.6" />
+      <text x="320" y="102" textAnchor="middle" fill="#BEC8D2" fontFamily="Arial, Helvetica, sans-serif" fontSize="12" fontWeight="700">!=</text>
+      <circle cx="320" cy="140" r="12" fill="#141D26" stroke="#E8EDF2" strokeWidth="1.6" />
+      <path d="M314 140 L318 144 L327 134" fill="none" stroke="#E8EDF2" strokeWidth="2" strokeLinecap="round" />
+
+      <line x1="172" y1="56" x2="292" y2="56" stroke="#E8EDF2" strokeWidth="1.8">
+        <animate attributeName="stroke-dasharray" values="0 130;130 0" dur="3.2s" repeatCount="indefinite" />
+      </line>
+      <line x1="348" y1="56" x2="468" y2="56" stroke="#E8EDF2" strokeWidth="1.8">
+        <animate attributeName="stroke-dasharray" values="0 130;130 0" dur="3.2s" begin="0.2s" repeatCount="indefinite" />
+      </line>
+      <rect x="20" y="82" width="152" height="32" rx="6" fill="none" stroke="#BEC8D2" strokeWidth="1.2">
+        <animate attributeName="opacity" values="0.25;1;0.25" dur="3.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="468" y="82" width="152" height="32" rx="6" fill="none" stroke="#BEC8D2" strokeWidth="1.2">
+        <animate attributeName="opacity" values="0.25;1;0.25" dur="3.2s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+  )
+}

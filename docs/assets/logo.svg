@@ -1,14 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 88" role="img" aria-label="LedgerIQ">
-  <defs>
-    <linearGradient id="mark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8EDF2"/>
-      <stop offset="100%" stop-color="#BEC8D2"/>
-    </linearGradient>
-  </defs>
-  <rect x="4" y="8" width="72" height="72" rx="16" fill="#141D26" stroke="#BEC8D2" stroke-width="1.6"/>
-  <rect x="20" y="24" width="40" height="6" rx="3" fill="url(#mark)"/>
-  <rect x="20" y="38" width="28" height="5" rx="2.5" fill="#8FA0AD"/>
-  <rect x="20" y="50" width="34" height="5" rx="2.5" fill="#8FA0AD"/>
-  <path d="M28 66.5 L36 73 L52 52" fill="none" stroke="#E8EDF2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="96" y="58" fill="#E8EDF2" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="600" letter-spacing="-0.5">LedgerIQ</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="64" viewBox="0 0 360 64" role="img" aria-label="LedgerIQ">
+  <polygon points="32,3 58,18 58,46 32,61 6,46 6,18" fill="#0A1016" stroke="#BEC8D2" stroke-width="1.8"/>
+  <polygon points="32,12 50,22.5 50,41.5 32,52 14,41.5 14,22.5" fill="#141D26"/>
+  <path d="M22 20 V43 H43" fill="none" stroke="#E8EDF2" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="26" y1="26" x2="46" y2="26" stroke="#8FA0AD" stroke-width="1.7" stroke-linecap="round"/>
+  <line x1="26" y1="33" x2="41" y2="33" stroke="#8FA0AD" stroke-width="1.7" stroke-linecap="round"/>
+  <line x1="28" y1="26" x2="39" y2="33" stroke="#BEC8D2" stroke-width="2" stroke-linecap="round"/>
+  <text x="76" y="43" fill="#E8EDF2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.6">Ledger</text>
+  <text x="186" y="43" fill="#BEC8D2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.6">IQ</text>
 </svg>

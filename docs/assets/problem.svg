@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" role="img" aria-label="B2B ledger mismatch problem">
+  <rect width="960" height="340" rx="20" fill="#0A1016"/>
+  <text x="480" y="36" text-anchor="middle" fill="#E8EDF2" font-family="Georgia, serif" font-size="22">The problem: two books, four ways they disagree</text>
+  <text x="480" y="58" text-anchor="middle" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">Internal ERP vs counterparty statement  same month, different truth</text>
+
+  <rect x="40" y="80" width="280" height="200" rx="14" fill="#141D26" stroke="#5E7384"/>
+  <text x="180" y="108" text-anchor="middle" fill="#E8EDF2" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700">Internal ledger</text>
+  <text x="64" y="140" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">INV-1042    $12,400</text>
+  <text x="64" y="168" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">INV-1043    $8,150</text>
+  <text x="64" y="196" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">PMT-881     $4,200</text>
+  <text x="64" y="224" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">INV-1100    $1,980</text>
+  <text x="64" y="252" fill="#5E7384" font-family="Segoe UI, sans-serif" font-size="11">Your ERP export</text>
+
+  <rect x="640" y="80" width="280" height="200" rx="14" fill="#141D26" stroke="#5E7384"/>
+  <text x="780" y="108" text-anchor="middle" fill="#E8EDF2" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700">Counterparty SOA</text>
+  <text x="664" y="140" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">INV-1042    $12,400</text>
+  <text x="664" y="168" fill="#BEC8D2" font-family="Segoe UI, sans-serif" font-size="12">INV-1043    $8,050</text>
+  <text x="664" y="196" fill="#8FA0AD" font-family="Segoe UI, sans-serif" font-size="12">PMT-881     $4,200</text>
+  <text x="664" y="224" fill="#BEC8D2" font-family="Segoe UI, sans-serif" font-size="12">INV-1100    missing</text>
+  <text x="664" y="252" fill="#5E7384" font-family="Segoe UI, sans-serif" font-size="11">Their statement of account</text>
+
+  <g font-family="Segoe UI, sans-serif" font-size="11">
+    <rect x="360" y="92" width="240" height="36" rx="8" fill="#1A2530" stroke="#5E7384"/>
+    <text x="480" y="114" text-anchor="middle" fill="#E8EDF2">Amount mismatch</text>
+    <rect x="360" y="138" width="240" height="36" rx="8" fill="#1A2530" stroke="#5E7384"/>
+    <text x="480" y="160" text-anchor="middle" fill="#E8EDF2">Missing record</text>
+    <rect x="360" y="184" width="240" height="36" rx="8" fill="#1A2530" stroke="#5E7384"/>
+    <text x="480" y="206" text-anchor="middle" fill="#E8EDF2">Date / FX drift</text>
+    <rect x="360" y="230" width="240" height="36" rx="8" fill="#1A2530" stroke="#5E7384"/>
+    <text x="480" y="252" text-anchor="middle" fill="#E8EDF2">Duplicate payment</text>
+  </g>
+</svg>

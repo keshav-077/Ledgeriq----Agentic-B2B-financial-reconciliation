@@ -1,12 +1,16 @@
 'use client'
 import Link from 'next/link'
+import { MatchingFlow } from '@/components/landing/MatchingFlow'
 
 export default function LandingPage() {
   return (
     <div className="bg-surface-elevated text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen">
       <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-16 h-16 bg-glass-fill backdrop-blur-xl border-b border-border-subtle shadow-sm">
         <Link href="/" className="flex items-center gap-2.5 min-w-0">
-          <img src="/brand/logo.svg" alt="LedgerIQ" className="h-8 w-auto" />
+          <img src="/brand/logo-mark.svg" alt="" className="h-8 w-8" />
+          <span className="font-display text-lg tracking-tight text-primary">
+            Ledger<span className="text-secondary">IQ</span>
+          </span>
         </Link>
         <div className="flex items-center gap-3">
           <Link
@@ -89,12 +93,8 @@ export default function LandingPage() {
               <p className="font-body-sm text-body-sm text-on-surface-variant max-w-lg">
                 Our AI understands the nuanced context behind transactions, automatically reconciling complex multi-party ledgers with human-like comprehension but machine speed.
               </p>
-              <div className="mt-8 h-32 rounded-lg border border-border-subtle bg-surface-container relative overflow-hidden">
-                <img
-                  src="/illustrations/matching-flow.svg"
-                  alt="Animated ledger matching across internal and counterparty statements"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+              <div className="mt-8 h-40 rounded-lg border border-border-subtle bg-surface-container relative overflow-hidden">
+                <MatchingFlow />
               </div>
             </div>
             <div className="bg-surface-elevated border border-border-subtle rounded-xl p-8 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] transition-shadow group md:col-span-3 flex flex-col md:flex-row items-center gap-8">
@@ -133,7 +133,7 @@ export default function LandingPage() {
 
       <footer className="py-12 px-4 md:px-16 bg-surface-container-lowest border-t border-border-subtle">
         <div className="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <img src="/brand/logo.svg" alt="LedgerIQ" className="h-8 w-auto" />
+          <img src="/brand/logo.svg" alt="LedgerIQ" className="h-9 w-auto" />
           <div className="flex gap-6 font-label-md text-label-md text-on-surface-variant">
             <span>Privacy Policy</span>
             <span>Terms of Service</span>

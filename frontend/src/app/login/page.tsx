@@ -53,7 +53,7 @@ export default function LoginPage() {
           <div className="w-full max-w-[400px]">
             <div className="mb-10">
               <Link href="/" className="inline-block mb-4">
-                <img src="/brand/logo.svg" alt="LedgerIQ" className="h-10 w-auto" />
+                <img src="/brand/logo.svg" alt="LedgerIQ" className="h-11 w-auto" />
               </Link>
               <p className="font-body-lg text-body-lg text-on-surface-variant">Log in to your account</p>
             </div>
