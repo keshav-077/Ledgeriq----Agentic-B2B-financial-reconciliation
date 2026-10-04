@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 88" role="img" aria-label="LedgerIQ">
+  <defs>
+    <linearGradient id="mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8EDF2"/>
+      <stop offset="100%" stop-color="#BEC8D2"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="8" width="72" height="72" rx="16" fill="#141D26" stroke="#BEC8D2" stroke-width="1.6"/>
+  <rect x="20" y="24" width="40" height="6" rx="3" fill="url(#mark)"/>
+  <rect x="20" y="38" width="28" height="5" rx="2.5" fill="#8FA0AD"/>
+  <rect x="20" y="50" width="34" height="5" rx="2.5" fill="#8FA0AD"/>
+  <path d="M28 66.5 L36 73 L52 52" fill="none" stroke="#E8EDF2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="58" fill="#E8EDF2" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="600" letter-spacing="-0.5">LedgerIQ</text>
+</svg>

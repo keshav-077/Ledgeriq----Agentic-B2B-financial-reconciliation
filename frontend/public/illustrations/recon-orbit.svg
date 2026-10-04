@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="Animated LedgerIQ orbit">
+  <defs>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#BEC8D2" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0A1016" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="210" cy="210" r="180" fill="url(#orb)"/>
+  <ellipse cx="210" cy="210" rx="150" ry="58" fill="none" stroke="#5E7384" stroke-width="1.2" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" from="0 210 210" to="360 210 210" dur="18s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="210" cy="210" rx="118" ry="160" fill="none" stroke="#8FA0AD" stroke-width="1" opacity="0.45">
+    <animateTransform attributeName="transform" type="rotate" from="40 210 210" to="400 210 210" dur="22s" repeatCount="indefinite"/>
+  </ellipse>
+  <circle cx="210" cy="210" r="46" fill="#141D26" stroke="#E8EDF2" stroke-width="1.8"/>
+  <text x="210" y="216" text-anchor="middle" fill="#E8EDF2" font-family="Georgia, serif" font-size="16" font-weight="600">IQ</text>
+  <circle r="7" fill="#E8EDF2">
+    <animateMotion dur="18s" repeatCount="indefinite" path="M210,152 a150,58 0 1,1 0,0.1"/>
+  </circle>
+  <circle r="5" fill="#BEC8D2">
+    <animateMotion dur="22s" repeatCount="indefinite" path="M210,50 a118,160 0 1,1 0,0.1"/>
+  </circle>
+</svg>

@@ -66,7 +66,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 lib64/
 parts/
 sdist/
@@ -275,3 +275,6 @@ local_erp_agent/config.local.json
 frontend/tsconfig.tsbuildinfo
 
 env.yaml
+
+# Local deploy artifacts (uploaded to S3, not source)
+deploy/*.tgz

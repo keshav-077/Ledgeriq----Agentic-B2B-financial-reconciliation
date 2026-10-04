@@ -4,6 +4,9 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Eye, EyeOff } from 'lucide-react'
 
+const DEMO_USERNAME = 'admin'
+const DEMO_PASSWORD = 'LedgerIQ-Demo'
+
 export default function LoginPage() {
   const router = useRouter()
   const [username, setUsername] = useState('')
@@ -37,13 +40,21 @@ export default function LoginPage() {
     }
   }
 
+  function fillDemo() {
+    setUsername(DEMO_USERNAME)
+    setPassword(DEMO_PASSWORD)
+    setError('')
+  }
+
   return (
     <div className="bg-background text-on-background min-h-screen flex items-center justify-center font-body-md overflow-hidden">
       <div className="w-full h-screen grid lg:grid-cols-2 relative">
-        <div className="flex flex-col justify-center items-center px-4 lg:px-16 bg-background z-10">
+        <div className="flex flex-col justify-center items-center px-4 lg:px-16 bg-background z-10 overflow-y-auto py-10">
           <div className="w-full max-w-[400px]">
-            <div className="mb-12">
-              <Link href="/" className="font-display text-display-lg text-primary mb-2 block">LedgerIQ</Link>
+            <div className="mb-10">
+              <Link href="/" className="inline-block mb-4">
+                <img src="/brand/logo.svg" alt="LedgerIQ" className="h-10 w-auto" />
+              </Link>
               <p className="font-body-lg text-body-lg text-on-surface-variant">Log in to your account</p>
             </div>
 
@@ -111,11 +122,30 @@ export default function LoginPage() {
               </div>
             </form>
 
-            <div className="mt-8 text-center">
-              <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Don&apos;t have an account?{' '}
-                <span className="text-primary border-b border-primary pb-0.5">Contact sales</span>
-              </p>
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-4 space-y-3">
+              <div>
+                <p className="font-label-md text-[11px] uppercase tracking-[0.18em] text-on-surface-variant">Explore the demo</p>
+                <p className="mt-1 text-xs text-on-surface-variant leading-relaxed">
+                  Recruiters, friends, and curious visitors — use these credentials to walk the console.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="rounded-lg bg-black/20 border border-white/8 px-3 py-2">
+                  <p className="text-[10px] uppercase tracking-wider text-on-surface-variant">Username</p>
+                  <p className="font-mono text-white mt-0.5">{DEMO_USERNAME}</p>
+                </div>
+                <div className="rounded-lg bg-black/20 border border-white/8 px-3 py-2">
+                  <p className="text-[10px] uppercase tracking-wider text-on-surface-variant">Password</p>
+                  <p className="font-mono text-white mt-0.5">{DEMO_PASSWORD}</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={fillDemo}
+                className="w-full rounded-full border border-primary/40 text-primary text-xs font-semibold uppercase tracking-wider py-2.5 hover:bg-white/5 transition-colors"
+              >
+                Fill demo login
+              </button>
             </div>
           </div>
         </div>
@@ -127,7 +157,12 @@ export default function LoginPage() {
               background: 'radial-gradient(ellipse at 40% 40%, rgba(190,200,210,0.22), transparent 55%), linear-gradient(160deg, #0A1016, #141D26 60%, #090f15)',
             }}
           />
-          <div className="absolute inset-0 bg-glass-fill backdrop-blur-[2px]" />
+          <img
+            src="/illustrations/recon-orbit.svg"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover opacity-80"
+          />
+          <div className="absolute inset-0 bg-glass-fill backdrop-blur-[1px]" />
           <div className="absolute inset-0 flex items-center justify-center p-16">
             <div className="max-w-md text-center">
               <h2 className="font-display text-display-lg text-primary mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">

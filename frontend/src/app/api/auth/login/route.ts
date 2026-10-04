@@ -26,9 +26,11 @@ export async function POST(request: Request) {
     const response = NextResponse.json({ success: true }, { status: 200 })
     
     // Next.js sayfaları koruması için gerçek zamanlı oturum çerezi
+    const secure = process.env.COOKIE_SECURE === 'true'
+
     response.cookies.set('ledgeriq_session', 'ledgeriq-authenticated-v1', {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure,
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 gün
@@ -36,7 +38,7 @@ export async function POST(request: Request) {
 
     response.cookies.set('ledgeriq_token', data.access_token, {
       httpOnly: false,
-      secure: process.env.NODE_ENV === 'production',
+      secure,
       sameSite: 'strict',
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
