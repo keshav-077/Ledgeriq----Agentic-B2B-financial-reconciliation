@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/logo.svg" alt="LedgerIQ" width="280"/>
+<img src="docs/assets/logo.png" alt="LedgerIQ" width="280"/>
 
 **Agentic B2B financial reconciliation — AI assists. Humans decide.**
 
@@ -40,7 +40,7 @@ B2B finance teams keep **two books for the same relationship**: an internal ERP 
 
 The usual fix is Excel: VLOOKUP, screenshots, and an email written from scratch. That leaks revenue, has no audit trail, and cannot scale across hundreds of counterparties.
 
-<img src="docs/assets/problem.svg" alt="Internal ledger versus counterparty statement — four mismatch types" width="100%"/>
+<img src="docs/assets/problem.png" alt="Internal ledger versus counterparty statement — four mismatch types" width="100%"/>
 
 ---
 
@@ -54,7 +54,7 @@ LedgerIQ does **not** let a language model invent the match. Numbers are decided
 4. **Hold at `awaiting_approval`** — nothing leaves the building until an authorized operator clicks approve.
 5. **Send** — SMTP only after that click; status moves to `email_sent`.
 
-<img src="docs/assets/how-it-works.svg" alt="Import, match, analyze, approve, send" width="100%"/>
+<img src="docs/assets/how-it-works.png" alt="Import, match, analyze, approve, send" width="100%"/>
 
 ```mermaid
 flowchart LR
@@ -70,11 +70,11 @@ flowchart LR
 
 Operator UI and the counterparty portal talk **only** to FastAPI. FastAPI owns JWT, RBAC, and orchestration. Gemini ADK agents do not open a raw Mongo connection — they call an allowlisted MCP server mounted at `/mcp/sse`. An optional local ERP agent pushes Excel/CSV/SAP-style exports into the same API.
 
-<img src="docs/assets/architecture.svg" alt="LedgerIQ layered architecture — Next.js, FastAPI, Gemini ADK, MongoDB, MCP, ERP" width="100%"/>
+<img src="docs/assets/architecture.png" alt="LedgerIQ layered architecture — Next.js, FastAPI, Gemini ADK, MongoDB, MCP, ERP" width="100%"/>
 
-<img src="docs/assets/system-design.svg" alt="Request path from UI through FastAPI, ADK, MCP, and MongoDB" width="100%"/>
+<img src="docs/assets/system-design.png" alt="Request path from UI through FastAPI, ADK, MCP, and MongoDB" width="100%"/>
 
-<img src="docs/assets/reconciliation-flow.svg" alt="Reconciliation pipeline from import to SMTP" width="100%"/>
+<img src="docs/assets/reconciliation-flow.png" alt="Reconciliation pipeline from import to SMTP" width="100%"/>
 
 ```mermaid
 flowchart TB
@@ -151,7 +151,7 @@ This is not a laundry list. Each technology exists to close a specific failure m
 
 Live project Region is **ap-southeast-2**. All regional resources stay there.
 
-<img src="docs/assets/deployment.svg" alt="Browser to EIP to nginx to frontend, backend, and MongoDB, with SSM secrets" width="100%"/>
+<img src="docs/assets/deployment.png" alt="Browser to EIP to nginx to frontend, backend, and MongoDB, with SSM secrets" width="100%"/>
 
 ```mermaid
 flowchart LR
@@ -205,7 +205,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ├── backend/             FastAPI, ADK agents, MCP server, services
 ├── local_erp_agent/     Downloadable ERP sync agent
 ├── deploy/              nginx, EC2 user-data, UI refresh script
-├── docs/assets/         Logo, architecture and design SVGs, demo GIF
+├── docs/assets/         Logo, diagrams (PNG for GitHub), source SVGs, demo GIF
 ├── docker-compose.yml   Local backend + MongoDB
 └── docker-compose.prod.yml   nginx + frontend + backend + mongo
 ```
@@ -214,7 +214,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 <div align="center">
 
-<img src="docs/assets/logo-mark.svg" alt="" width="48"/>
+<img src="docs/assets/logo-mark.png" alt="" width="48"/>
 
 **LedgerIQ** — *Reconciliation reinvented.*
 
